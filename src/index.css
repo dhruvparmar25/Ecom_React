@@ -55,3 +55,26 @@ h1 {
 .slide img{
     width: 150px;
 }
+.common-headding{
+    font-size: 22px;
+    font-weight: bold;
+text-transform: capitalize;
+text-align: center;
+margin-top: 4rem;
+}
+/* .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: auto;
+
+} */
+.footer-main{
+    justify-content: space-between;
+    display: flex
+;
+    /* align-items: center; */
+}

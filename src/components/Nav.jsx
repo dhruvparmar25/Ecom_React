@@ -7,7 +7,7 @@ function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="shadow-md bg-zinc-700 text-amber-50 fixed w-full top-0 left-0 z-50">
+<nav className="fixed w-full top-0 left-0 z-50 shadow-md bg-zinc-700 text-amber-50">
       <div className="flex items-center justify-between py-2 px-6 md:px-10">
         {/* Logo */}
         <div className="font-bold text-2xl cursor-pointer">
@@ -61,22 +61,22 @@ function Nav() {
           }`}
       >
 
-        <Link  className=" flex ml-7 mb-1 border-b-1 items-center py-5 text-center" to={"/"} onClick={() => setOpen(false)}>
+        <Link className=" flex ml-7 mb-1 border-b-1 items-center py-5 text-center" to={"/"} onClick={() => setOpen(false)}>
           Home
         </Link>
 
 
-        <Link  className=" flex ml-7 mb-1 border-b-1 items-center py-5 text-center" to={"/about"} onClick={() => setOpen(false)}>
+        <Link className=" flex ml-7 mb-1 border-b-1 items-center py-5 text-center" to={"/about"} onClick={() => setOpen(false)}>
           About
         </Link>
 
 
-        <Link  className=" flex ml-7 mb-1 border-b-1 items-center py-5 text-center" to={"/products"} onClick={() => setOpen(false)}>
+        <Link className=" flex ml-7 mb-1 border-b-1 items-center py-5 text-center" to={"/products"} onClick={() => setOpen(false)}>
           Products
         </Link>
 
 
-        <Link  className=" flex ml-7 mb-1 border-b-1 items-center py-5 text-center" to={"/contact"} onClick={() => setOpen(false)}>
+        <Link className=" flex ml-7 mb-1 border-b-1 items-center py-5 text-center" to={"/contact"} onClick={() => setOpen(false)}>
           Contact
         </Link>
 

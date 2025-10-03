@@ -8,6 +8,7 @@
   import Cart from './Pages/Cart'
   import ErrorPage from './Pages/ErrorPage'
   import Nav from './components/Nav'
+import Footer from './components/Footer'
 
   function App() {
     return (
@@ -23,6 +24,7 @@
             <Route path='/cart' element={<Cart />} />
             <Route path='*' element={<ErrorPage />} />
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </div>
     )
