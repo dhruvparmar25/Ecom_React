@@ -4,7 +4,7 @@ import Banner from "../assets/banner.jpg";
 
 function HeroSection({ mydata }) {
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white mb-16">
       <div className="container max-w-[1200px] mx-auto px-4 py-10 relative">
         {/* Decorative Box */}
         <div className="hidden md:block w-60 h-40 bg-amber-200 absolute right-0 top-5 rounded-lg opacity-70"></div>
