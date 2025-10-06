@@ -20,7 +20,7 @@ import Footer from './components/Footer'
             <Route path='/about' element={<About />} />
             <Route path='/products' element={<Products />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/singleproduct/:id' element={<Singleproduct />} />
+            <Route path='/singleproduct/:_id' element={<Singleproduct />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='*' element={<ErrorPage />} />
           </Routes>
