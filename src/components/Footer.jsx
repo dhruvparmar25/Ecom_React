@@ -6,8 +6,8 @@ import { TiSocialYoutube } from "react-icons/ti";
 
 function Footer() {
   return (
-    <>
-      <section className="contact-short w-[60%] flex m-auto bg-gray-400 text-white  ">
+    <div className="mb-16">
+      {/* <section className="contact-short w-[60%] flex m-auto bg-gray-400 text-white  ">
         <div className="flex justify-between items-center px-15 py-4 w-[100%]">
           <div>
             <h3>Ready to get Started?</h3>
@@ -19,8 +19,8 @@ function Footer() {
             </button>
           </div>
         </div>
-      </section>
-        <div className="bg-[#06122d] text-white">
+      </section>   */}
+        <div className="bg-[#06122d] text-white ">
         <footer className="w-[80%] m-auto justify-center items-centerin b">
           <div className="footer-main grid grid-cols-4 p-5">
             <div className="footer-about">
@@ -64,9 +64,9 @@ function Footer() {
           </div>
 
         </footer>
-        <div className="footer-bottom">
+        <div className="footer-bottom ">
           <hr />
-          <div className="copyright flex justify-around items-center">
+          <div className="copyright flex justify-around items-center p-3.5 ">
             <p>@{new Date().getFullYear()} DhruvParmar. All Rights Reserved</p>
             <div>
               <p>PRIVACY POLICY</p>
@@ -75,7 +75,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -24,7 +24,7 @@ function HeroSection({ mydata }) {
               aspernatur eum suscipit doloremque!
             </p>
             <NavLink>
-              <button className="px-4 py-2 mt-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+              <button >
                 Shop Now
               </button>
             </NavLink>
