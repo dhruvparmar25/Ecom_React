@@ -22,7 +22,7 @@ function Footer() {
       </section>   */}
         <div className="bg-[#06122d] text-white ">
         <footer className="w-[80%] m-auto justify-center items-centerin b">
-          <div className="footer-main grid grid-cols-4 p-5">
+          <div className="footer-main md:grid md:grid-cols-5 flex flex-col gap-11 p-5">
             <div className="footer-about">
               <h3 className="text-2xl">Dhruv Parmar</h3>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
@@ -45,7 +45,7 @@ function Footer() {
             </div>
             <div className="followUs">
               <h3>Follow Us</h3>
-              <div className="social-icon flex gap-2 text-2xl">
+              <div className="social-icon flex gap-2 text-2xl mt-2">
                 <div className="fb">
                   <TiSocialFacebookCircular className="text-blue-500" />
                 </div>
@@ -59,19 +59,20 @@ function Footer() {
             </div>
             <div className="callUs">
               <h3>Call Us</h3>
-              <a href="tel:8140137412">+91 8140137412</a>
+              <a href="tel:8140137412" className="mt-2 text-[12px]">+91 8140137412</a>
+            </div>
+            <div>
+              <p>PRIVACY POLICY</p>
+              <p className="text-[12px] mt-2">TERMS & CONDITION</p>
             </div>
           </div>
 
         </footer>
         <div className="footer-bottom ">
           <hr />
-          <div className="copyright flex justify-around items-center p-3.5 ">
+          <div className="copyright text-center p-3.5 ">
             <p>@{new Date().getFullYear()} DhruvParmar. All Rights Reserved</p>
-            <div>
-              <p>PRIVACY POLICY</p>
-              <p>TERMS & CONDITION</p>
-            </div>
+            
           </div>
         </div>
       </div>
