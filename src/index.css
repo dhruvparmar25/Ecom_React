@@ -28,7 +28,7 @@ h1 {
     height: 50px;
     border-radius: 100%;
     padding: 10px;
-    color: blue;
+    /* color: blue; */
 }
 .services-1,.services-3{
     flex-direction: column;

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useProductContext } from "../context/productContext";
 import { useParams } from "react-router-dom";
 import PageNavigation from "../components/PageNavigation";
+import Star from "../components/Star";
 
 const API = import.meta.env.VITE_API_BASE_URL + "/product";
 
@@ -13,7 +14,6 @@ function Singleproduct() {
   const {
     brand,
     design,
-    discount,
     discription,
     image,
     name,
@@ -53,17 +53,20 @@ function Singleproduct() {
         <div className="detail box w-[40%] p-14 flex flex-col gap-4">
           <div className="title text-3xl bg-black text-white p-2 rounded w-fit">{name}</div>
 
-          <div className="mrp text-[18px] text-red-400">
-            MRP ₹ <del>{mrp > 0 ? mrp : "—"}</del>
+          <div className="mrp text-[18px]">
+            MRP ₹ <del>{mrp > 0 ? mrp : "—"}.00</del>
           </div>
 
-          <div className="dealOfTheDay text-purple-600 text-[18px]">
-            Deal Of The Day ₹ {price}
+          <div className="dealOfTheDay text-red-600 text-[18px]">
+            Deal Of The Day ₹ {price}.00
           </div>
 
           <div className="discription text-[24px] w-100">{discription}</div>
-          <div className="size">{size}</div>
-            <div className="rating text-[18px]">{rating}</div>
+          {/* <div className="size">{size}</div> */}
+            <div className="rating text-[18px]">
+              <Star star={rating} />
+              {/* {rating} */}
+              </div>
 
           <div className="brand "><strong>Brand :</strong> {brand}</div>
           <div className="design ">
