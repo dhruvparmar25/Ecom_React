@@ -5,15 +5,15 @@ import { useFiltercontext } from '../context/filter_context'
 
 function ProductList() {
 
-  const {filter_products,setGridView}=useFiltercontext();
+  const {filter_products, grid_view}=useFiltercontext();
 
-  if (setGridView ) {
+  if ( grid_view ) {
     return <GridView products={filter_products}/>
   }
 
-  //   if (setGridView === false) {
-  //   return <ListView products={filter_products}/>
-  // }
+    if ( grid_view === false) {
+    return <ListView products={filter_products}/>
+  }
 
   return (
     <div>ProductList</div>
