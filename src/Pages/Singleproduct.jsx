@@ -3,6 +3,8 @@ import { useProductContext } from "../context/productContext";
 import { useParams } from "react-router-dom";
 import PageNavigation from "../components/PageNavigation";
 import Star from "../components/Star";
+import CartAmountToggle from "./CartAmountToggle";
+import AddToCart from "./AddToCart";
 
 const API = import.meta.env.VITE_API_BASE_URL + "/product";
 
@@ -20,7 +22,6 @@ function Singleproduct() {
     price,
     rating,
     type,
-    size,
     offer,
   } = singleProduct;
 
@@ -76,8 +77,11 @@ function Singleproduct() {
             <strong> Type : </strong> {type}
           </div>
           <div className="discount bg-zinc-500 text-white w-fit p-1 rounded">Discount : {offer}</div>
-        </div>
+         <hr />
+<AddToCart product={singleProduct}/>        </div>
+       
       </div>
+      
     </div>
   );
 }

@@ -83,7 +83,7 @@ button {
   line-height: 2.5em;
   overflow: hidden;
   cursor: pointer;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-size: 17px;
   z-index: 1;
   color: var(--color);
@@ -118,4 +118,17 @@ button:hover::before {
 }
 .pageNavigation a{
     color: blue;
+}
+.qty-btn {
+    display: flex
+;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    height: auto;
+    /* height: 38px; */
 }
