@@ -15,7 +15,7 @@ function FeatureProdcut() {
                     <div className="intro-data text-2xl">Check Now!</div>
                     <div className="common-heading text-xl">Our Featre Services</div>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-5 m-auto gap-5 w-[80%]">
+                <div className="grid grid-cols-2 md:grid-cols-5 m-auto  w-[80%] ">
                     {
                         featureProducts.map((curElem) => {
                             console.log("🚀 ~ FeatureProdcut ~ curElm:", curElem)
