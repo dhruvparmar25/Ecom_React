@@ -132,3 +132,14 @@ button:hover::before {
     height: auto;
     /* height: 38px; */
 }
+.sort-btn{
+    width: fit-content;
+    padding: 5px;
+height: fit-content;
+border: none;
+}
+.active{
+  background-color: #0077ff;
+    color: white;
+    border: none;
+}
