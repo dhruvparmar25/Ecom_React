@@ -23,6 +23,7 @@ const filterReducer = (state, action) => {
         sorting_value: action.payload,
       };
 case "SORTING_PRODUCTS":
+  // eslint-disable-next-line no-case-declarations
   let newSortData = [...action.payload]; // clone to avoid mutation
 
   if (state.sorting_value === "a-z") {

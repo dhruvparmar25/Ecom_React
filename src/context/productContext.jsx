@@ -26,6 +26,7 @@ const AppProvider = ({ children }) => {
       const products = await res.data.data;
       dispatch({ type: "SET_API-DATA", payload: products });
     } catch (error) {
+    console.log("🚀 ~ getProducts ~ error:", error)
 
       dispatch({ type: "API_ERROR" });
     }
