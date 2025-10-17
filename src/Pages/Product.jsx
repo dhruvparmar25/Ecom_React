@@ -1,13 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Product(curElem) {
+function  Product(curElem) {
   const { _id, image, brand, price } = curElem;
   return (
     <div className="gap-10">
       <NavLink to={`/singleproduct/${_id}`}>
         <div className="max-w-[80%] bg-gray-200  m-auto border-gray-200 rounded-lg shadow-sm dark:bg-amber-100-800 dark:border-gray-700 ">
-          <div className="w-50 m-auto ">
+          <div className="">
             <img className="rounded-t-lg p-2" src={image} alt="" />
           </div>
           <div className="p-5 flex justify-between">

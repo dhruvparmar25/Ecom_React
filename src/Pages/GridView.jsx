@@ -6,10 +6,10 @@ function GridView({products}) {
   return (
     <>
     <div className="section">
-    <div className="container grid grid-cols-4 gap-4">
+    <div className="container grid md:grid-cols-4 gap-4">
       {products.map((curElem)=>{
         return <Product key={curElem._id} {...curElem}/>
-      })
+      })  
       }
     </div>
 

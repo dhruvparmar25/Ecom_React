@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import Banner from "../assets/banner.jpg";
+import { NavLink } from "react-router-dom";
 
 function HeroSection({ mydata }) {
   return (
@@ -23,8 +23,8 @@ function HeroSection({ mydata }) {
               beatae laboriosam eaque harum expedita facilis placeat similique quo,
               aspernatur eum suscipit doloremque!
             </p>
-            <NavLink>
-              <button >
+            <NavLink to="/products">
+              <button  className="bg-white mt-5">
                 Shop Now
               </button>
             </NavLink>

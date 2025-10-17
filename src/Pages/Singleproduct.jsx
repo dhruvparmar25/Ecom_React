@@ -3,7 +3,6 @@ import { useProductContext } from "../context/productContext";
 import { useParams } from "react-router-dom";
 import PageNavigation from "../components/PageNavigation";
 import Star from "../components/Star";
-import CartAmountToggle from "./CartAmountToggle";
 import AddToCart from "./AddToCart";
 
 const API = import.meta.env.VITE_API_BASE_URL + "/product";
@@ -30,7 +29,7 @@ function Singleproduct() {
   }, []);
 
   if (isSignleLoading) {
-    return <div className="page-loading">Loading.....</div>;
+    return <div className="page-loading text-center py-10 text-xl">Loading.....</div>;
   }
 
   // ✅ Safely handle missing or invalid values
@@ -42,46 +41,75 @@ function Singleproduct() {
   // ✅ Calculate MRP only if we have a valid price
   const mrp = numericPrice > 0 ? Math.round(numericPrice * (1 + offerValue / 100)) : 0;
 
-  console.log("price:", numericPrice, "offer:", offerValue, "mrp:", mrp);
-
   return (
-    <div className="mt-4">
+    <div className="mt-6">
       <PageNavigation title={brand} />
-      <div className="detailpage w-[80%] m-auto flex">
-        <div className="image-box w-[40%] p-10">
-          <img src={image} alt={name} />
-        </div>
-        <div className="detail box w-[40%] p-14 flex flex-col gap-4">
-          <div className="title text-3xl bg-black text-white p-2 rounded w-fit">{name}</div>
 
-          <div className="mrp text-[18px]">
+      <div
+        className="
+          detailpage 
+          w-[90%] 
+          mx-auto 
+          grid 
+          grid-cols-1 
+          md:grid-cols-2 
+          gap-8 
+          bg-white 
+          shadow-md 
+          rounded-2xl 
+          p-6
+        "
+      >
+        {/* Product Image */}
+        <div className="image-box flex justify-center items-center">
+          <img
+            src={image}
+            alt={name}
+            className="w-full max-w-md rounded-2xl object-cover shadow"
+          />
+        </div>
+
+        {/* Product Details */}
+        <div className="detail-box flex flex-col gap-4 justify-center">
+          <h2 className="text-2xl md:text-3xl font-bold bg-black text-white px-3 py-2 rounded w-fit">
+            {name}
+          </h2>
+
+          <div className="text-[18px]">
             MRP ₹ <del>{mrp > 0 ? mrp : "—"}.00</del>
           </div>
 
-          <div className="dealOfTheDay text-red-600 text-[18px]">
+          <div className="text-red-600 text-[18px] font-semibold">
             Deal Of The Day ₹ {price}.00
           </div>
 
-          <div className="discription text-[24px] w-100">{discription}</div>
-          {/* <div className="size">{size}</div> */}
-            <div className="rating text-[18px]">
-              <Star star={rating} />
-              {/* {rating} */}
-              </div>
+          <p className="text-[16px] text-gray-700 leading-relaxed">
+            {discription}
+          </p>
 
-          <div className="brand "><strong>Brand :</strong> {brand}</div>
-          <div className="design ">
-            <strong>Design : </strong> {design}
+          <div className="rating flex items-center gap-2">
+            <Star star={rating} />
           </div>
-          <div className="type">
-            <strong> Type : </strong> {type}
+
+          <div className="text-[16px]">
+            <strong>Brand:</strong> {brand}
           </div>
-          <div className="discount bg-zinc-500 text-white w-fit p-1 rounded">Discount : {offer}</div>
-         <hr />
-<AddToCart product={singleProduct}/>        </div>
-       
+          <div className="text-[16px]">
+            <strong>Design:</strong> {design}
+          </div>
+          <div className="text-[16px]">
+            <strong>Type:</strong> {type}
+          </div>
+
+          <div className="discount bg-zinc-700 text-white w-fit px-3 py-1 rounded">
+            Discount: {offer}
+          </div>
+
+          <hr className="my-3 border-gray-300" />
+
+          <AddToCart product={singleProduct} />
+        </div>
       </div>
-      
     </div>
   );
 }
